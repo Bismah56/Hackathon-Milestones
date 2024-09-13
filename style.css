@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+   display: flex;
+   background-color: #aca8a8;
+   justify-content: center;
+   align-items: center;
+   height: 170vh;
+}
+
+#container{
+    position: absolute;
+    width: 65vw;
+    height: 140vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+#PersonalInfo{
+    background-color: #504747;
+    height: 20%;
+    width: 25%;
+    border-top-left-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#photo{
+    height: 135px;
+    width: 125px;
+}
+
+#photo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #332a2a;
+    object-fit: cover;
+}
+
+#PersonalInfo2{
+    background-color: #504747;
+    height: 20%;
+    width: 75%;
+    border-top-right-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#name{
+    color: blanchedalmond;
+    font-size: 28px;
+    margin-left: 45px;
+}
+
+#name p{
+    color: rgb(231, 208, 173);
+    font-size: medium;
+}
+
+#EducationSkill{
+    background-color: rgb(221, 198, 173);
+    width: 20%;
+    height: 80%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+}
+
+#Details{
+    background-color: whitesmoke;
+    border-bottom-right-radius: 50px;
+    width: 62%;
+    height: 80%;
+    color: #332a2a;
+    padding-left: 6.5%;
+    padding-right: 6.5%;
+}
+
+#Details h4{
+    color: #332a2a;
+    border-bottom: 1px solid #332a2a;
+}
+
+.presence{
+    font-size: small;
+    color: #948d8d;
+}
+
+#triangle{
+    height: 0px;
+    width: 0px;
+    background-color: transparent;
+    border: 112px solid transparent;
+    border-top: 95px solid #504747;
+}
+
+#email{
+    text-decoration: underline;
+    font-size: 12px;
+    padding-left: 4px;
+}
+
+#EducationSkill span{
+    color: #332a2a;
+    font-size: 12px;
+}
+
+#Education{
+    padding-left: px;
+}
+
+.hide{
+    display: none;
+}
+
+#Skills button{
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 15px;
+    color: white;
+    background-color: #504747;
+}
+
+#Skills button:hover{
+    cursor: pointer;
+}
