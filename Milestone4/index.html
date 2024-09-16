@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume Builder</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <!--Editable Resume Builder Form -->
+    <form >  
+        <h1>Editable Resume Builder Form</h1>
+        <p style="color: black;">Fill out the following fields to generate your resume :</p>
+        <p>* Indicates required question</p>
+        <fieldset>
+            <legend>Personal Information</legend>
+                <label for="name" class="required">Name :</label><br>
+                <input type="text" id="name" required><br><br>
+
+                <label for="email" class="required">Email :</label><br>
+                <input type="email" id="email" required><br><br>
+
+                <label for="mobNo" class="required">Phone No. :</label><br>
+                <input type="tel" id="mobNo." pattern="[0-9]{11}" required><br><br>
+
+                <label for="address">Address :</label><br>
+                <input type="text" id="address"><br><br>
+
+                <label for="profile-Pic" id="imgBtn">Upload Profile Image</label><br>
+                <input type="file" id="profile-Pic" accept=".jpg, .png, .jpeg"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+                <label for="degree" class="required">Degree(s) :</label><br>
+                <input type="text" id="degree" required><br>
+
+                <label for="field" class="required">Field of study :</label><br>
+                <input type="text" id="field" required><br>
+
+                <label for="institute" class="required">Institution Name :</label><br>
+                <input type="text" id="institute" required><br>
+
+                <label for="studyperiod" class="required">Academic Period :</label><br>
+                <input type="text" id="studyperiod" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Work Experience</legend>
+                <label for="title" class="required">Job Title :</label><br>
+                <input type="text" id="title" required><br>
+
+                <label for="exp"class="required">Experience :</label><br>
+                <textarea  id="exp" rows="6" required></textarea><br>
+
+                <label for="obj"class="required">Objective :</label><br>
+                <textarea  id="obj" rows="4" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <p>Enter atleast 3 skills:</p>
+                <input type="text" id="s1" class="skills" required><br>
+                <input type="text" id="s2" class="skills" required><br>
+                <input type="text" id="s3" class="skills" required><br>
+                <input type="text" id="s4" class="skills"><br>
+                <input type="text" id="s5" class="skills"><br>
+        </fieldset>
+
+        <input type="submit" value="Generate Resume" id="btn">
+    </form>
+    <hr>
+
+    <!--Dynamic and Editable Resume -->
+    <div id="resume-container">
+        <div id="box1">
+            <div id="photo">
+                <img src="./default-profile-pic.jpg" id="pic">
+            </div>
+            <div id="nameTitle" contenteditable="true">name</div>
+            <p id="jobTitle" contenteditable="true">job title</p>
+        </div>
+
+        <div id="box2">
+            <div id="ContactDetails"><h3>Contact Details</h3>
+                <p>
+                    <i class="fa-solid fa-envelope"></i> 
+                    <span id="email_" contenteditable="true"></span>
+                </p>
+                <p>
+                    <i class="fa-solid fa-phone"></i> 
+                    <span id="number" style="padding-left: 4px;" contenteditable="true"></span>
+                </p>
+                <p>
+                    <i class="fa-solid fa-location-dot"></i> 
+                    <span style="padding-left: 8px;" id="location" contenteditable="true"></span>
+                </p>
+            </div>
+            <div id="Education">
+                <h3>Education</h3>
+                <i class="fa-solid fa-graduation-cap"></i> <b style="font-size: small;" id="Degree" contenteditable="true"></b><br>
+                <i class="fa-solid fa-school"></i> <span style="text-decoration: underline;" id="Institute" contenteditable="true"></span>
+                <div id="field_" contenteditable="true"></div>
+                <span id="academic-year" contenteditable="true"></span>  
+            </div>
+            <div>
+                <h3>Skills</h3>
+                <div id="S1" contenteditable="true"></div>
+                <div id="S2" contenteditable="true"></div>
+                <div id="S3" contenteditable="true"></div>
+                <div id="S4" contenteditable="true"></div>
+                <div id="S5" contenteditable="true"></div>
+            </div>
+        </div>
+        <div id="box3">
+            <h3>Objectives</h3>
+            <p style="font-size: 14px;" id="objective" contenteditable="true"></p>
+
+            <br>
+            <h3>Work Experience</h3>
+            <p id="experience" contenteditable="true"></p>
+
+            <br>
+            <h3>References</h3>
+            <p style="font-size: 14px;" contenteditable="true">References available upon request.</p>
+        </div>
+    </div>
+
+    <label for="image" id="imageUpdate">Update Image</label>
+    <input type="file" id="image" accept=".jpg, .jpeg, .png">
+</body>
+<script src="./main.js"></script>
+</html>
