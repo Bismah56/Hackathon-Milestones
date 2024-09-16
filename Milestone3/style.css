@@ -1,0 +1,219 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('open-space-office.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+}
+
+form{
+    font-family: 'Times New Roman', Times, serif;
+    border: 4px solid #464c5e;
+    border-radius: 30px;
+    width: 60%;
+    padding: 16px;
+    background: transparent;
+    backdrop-filter: blur(50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset{
+    border-radius: 30px;
+    border-color: #1f3055;
+    width: 80%;
+}
+
+legend{
+    text-align: center;
+    color: #0f0d0f;
+    font-weight: 1000;
+    font-size: 1.2rem;
+}
+
+input{
+    height: 25px;
+    width: 95%;
+    background-color: #757474;
+    border: none;
+    border-radius: 10px;
+    margin: 4px;
+    text-indent: 14px;
+}
+
+label{
+    color: #141f35;
+    font-size: large;
+    padding-left: 15px;
+}
+
+#exp{
+    width: 95%;
+    background-color: #757474;
+    border: none;
+    border-radius: 10px;
+    margin: 4px;
+    text-indent: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#obj{
+    width: 95%;
+    background-color:#757474;
+    border: none;
+    border-radius: 10px;
+    margin: 4px;
+    text-indent: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form h1{
+    text-align: center;
+    color: #1f3055;
+    text-decoration: underline;
+}
+
+form p{
+    font-size: 1rem;
+    font-weight: 600;
+    color: red;
+}
+
+#btn{
+    color: white;
+    font-size: large;
+    padding: 4px;
+    background-color: #30289e;
+    border-radius: 10px;
+    border: 2px solid #0a1a3d;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+}
+
+#profile-Pic{
+    display: none;
+}
+
+#imgBtn{
+    color: white;
+    font-size: medium;
+    padding: 8px;
+    background-color: rgb(61, 134, 52);
+    border-radius: 5px;
+    border: 2px solid darkgreen;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+#resume-container{
+    background-color: #344a61;
+    width: 50%;
+    height: 800px;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 4px solid rgb(10, 9, 9);
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+}
+
+#resume-container h3{
+    text-decoration: overline;
+    border-bottom: 2px solid black;
+}
+
+#box1{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#photo{
+    height: 145px;
+    width: 25%;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+#photo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #332a2a;
+    object-fit: cover;
+}
+
+#nameTitle{
+    height: 50px;
+    width: 25%;
+    color: white;
+    font-size: 28px;
+}
+#jobTitle{
+    height: 150px;
+    width: 50%;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#box2{
+    height: 600px;
+    width: 30%;
+    background-color: #8094aa;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    border-bottom-left-radius: 15px;
+    gap: 20px;
+}
+
+#box3{
+    height: 600px;
+    width: 60%;
+    background-color: rgb(221, 211, 211);
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    border-bottom-right-radius: 15px;
+}
+
+#box3 p{
+    font-size: small;
+}
+
+#ContactDetails span{
+    padding-left: 2px;
+    font-size: 14px;
+}
+
+#email_{
+    text-decoration: underline;
+}
+
+#Degree{
+    padding-left: 2px;
+}
+
+#Institute{
+    padding-left: 2px;
+}
+
+#academic-year{
+    font-size: small;
+    color: #363434;
+}
+
+.required::after{
+    content: "*";
+    color: red;
+    font-size: larger;
+}
