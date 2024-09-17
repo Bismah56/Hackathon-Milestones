@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Resume Builder</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <!--Shareable Resume Builder Form -->
+    <form >  
+        <h1>Shareable Resume Builder Form</h1>
+        <p style="color: black;">Fill out the following fields to generate your resume :</p>
+        <p>* Indicates required question</p>
+        <fieldset>
+            <legend>Personal Information</legend>
+                <label for="Username" class="required">Username :</label><br>
+                <input type="text" id="Username" required><br><br>
+
+                <label for="name" class="required">Name :</label><br>
+                <input type="text" id="name" required><br><br>
+
+                <label for="email" class="required">Email :</label><br>
+                <input type="email" id="email" required><br><br>
+
+                <label for="mobNo" class="required">Phone No. :</label><br>
+                <input type="tel" id="mobNo." pattern="[0-9]{11}" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+                <label for="degree" class="required">Degree(s) :</label><br>
+                <input type="text" id="degree" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Work Experience</legend>
+                <label for="title" class="required">Job Title :</label><br>
+                <input type="text" id="title" required><br>
+
+                <label for="exp"class="required">Experience :</label><br>
+                <textarea  id="exp" rows="6" required></textarea><br>
+
+                <label for="obj"class="required">Objective :</label><br>
+                <textarea  id="obj" rows="4" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <p>Enter your skills:</p>
+            <textarea  id="skills" rows="4" required></textarea>
+        </fieldset>
+
+        <input type="submit" value="Generate Resume" id="btn">
+    </form>
+    <hr>
+
+    <!--Dynamic, Editable and Shareable Resume -->
+    <div id="resume-container">
+        <div id="box1">
+            <div id="nameTitle" contenteditable="true">name</div>
+            <p id="jobTitle" contenteditable="true">job title</p>
+        </div>
+
+        <div id="box2">
+            <div id="ContactDetails"><h4>Contact Details</h4>
+                <p>
+                    <i class="fa-solid fa-envelope"></i> 
+                    <span id="email_" contenteditable="true"></span>
+                </p>
+                <p>
+                    <i class="fa-solid fa-phone"></i> 
+                    <span id="number" style="padding-left: 4px;" contenteditable="true"></span>
+                </p>
+            </div>
+            <div id="Education">
+                <h4>Education</h4>
+                <i class="fa-solid fa-graduation-cap"></i> <b style="font-size: small;" id="Degree" contenteditable="true"></b> 
+            </div>
+            <div>
+                <h4>Skills</h4>
+                <div id="Skill" contenteditable="true"></div>
+            </div>
+        </div>
+        <div id="box3">
+            <h4>Objectives</h4>
+            <p style="font-size: 14px;" id="objective" contenteditable="true"></p>
+
+            <br>
+            <h4>Work Experience</h4>
+            <p id="experience" contenteditable="true"></p>
+        </div>
+    </div>
+
+    <!-- Shareable link and Download Option-->
+    <div id="shareable-link" style="display: none;">
+        <h2>Shareable Link</h2>
+        <p>Here is your unique URL to view or edit your resume:</p>
+        <a href="#" id="link" target="_blank"></a>
+    </div>
+
+    <br>
+    <button id="pdf"><b>Download as PDF</b></button>
+
+</body>
+<script src="./main.js"></script>
+</html>
