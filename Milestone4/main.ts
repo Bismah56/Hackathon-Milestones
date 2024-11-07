@@ -48,7 +48,7 @@ _userphoto.addEventListener('change',()=>{
 form.addEventListener('submit',(event)=>{
     event.preventDefault();
     document.body.style.backgroundImage = 'none';
-    document.body.style.backgroundColor = '#F0E4CC';
+    document.body.style.backgroundColor = '#797878';
     form.style.display = 'none';
     resume.style.display = 'inherit';
     imgUpdatebtn.style.display = 'inherit';
