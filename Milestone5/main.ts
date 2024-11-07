@@ -17,7 +17,7 @@ const link_container = document.getElementById('shareable-link') as HTMLDivEleme
 form.addEventListener('submit',(event)=>{
     event.preventDefault();       //prevents page reload
     document.body.style.backgroundImage = 'none';
-    document.body.style.backgroundColor = 'white';
+    document.body.style.backgroundColor = '#797878';
     (document.getElementById('resume-container') as HTMLDivElement).style.display = 'inherit';
     form.style.display = 'none';
     downloadBtn.style.display = 'inherit';
@@ -46,7 +46,7 @@ form.addEventListener('submit',(event)=>{
     };
 
     //saving the data locally
-    localStorage.setItem(username, JSON.stringify(resumeData));  
+    localStorage.setItem(username, JSON.stringify(resumeData));  //string
 
     //Generate resume content dynamically:
     name_.textContent = name;
@@ -59,7 +59,7 @@ form.addEventListener('submit',(event)=>{
     exp_.textContent = experience;
 
     //Generate a shareable URL with username only
-    const shareableURL =  `${window.location.origin}?username=${encodeURIComponent(username)}`;
+    const shareableURL =  `${window.location.origin}${location.pathname}?username=${encodeURIComponent(username)}`;
 
     //Display shareable link
     link_container.style.display = 'inherit';
@@ -75,10 +75,10 @@ window.addEventListener('DOMContentLoaded',()=>{
     if(username){
 
         //Autofill form if data is found in localStorage
-        const savedResumeData = localStorage.getItem(username);
+        const savedResumeData = localStorage.getItem(username);  //key
 
         if (savedResumeData) {
-            const resumeData = JSON.parse(savedResumeData);
+            const resumeData = JSON.parse(savedResumeData);  //object now
             (document.getElementById('Username') as HTMLInputElement).value = username;
             (document.getElementById('name') as HTMLInputElement).value = resumeData.name;
             (document.getElementById('email') as HTMLInputElement).value = resumeData.email;
@@ -88,9 +88,6 @@ window.addEventListener('DOMContentLoaded',()=>{
             (document.getElementById('exp') as HTMLTextAreaElement).value = resumeData.experience;
             (document.getElementById('obj') as HTMLTextAreaElement).value = resumeData.objective;
             (document.getElementById('skills') as HTMLTextAreaElement).value = resumeData.skill;
-
-            // Submit the form programmatically
-            form.submit();
         }
     }
 });

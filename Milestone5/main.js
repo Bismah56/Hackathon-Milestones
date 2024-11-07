@@ -15,7 +15,7 @@ var link_container = document.getElementById('shareable-link');
 form.addEventListener('submit', function (event) {
     event.preventDefault(); //prevents page reload
     document.body.style.backgroundImage = 'none';
-    document.body.style.backgroundColor = 'white';
+    document.body.style.backgroundColor = '#797878';
     document.getElementById('resume-container').style.display = 'inherit';
     form.style.display = 'none';
     downloadBtn.style.display = 'inherit';
@@ -41,7 +41,7 @@ form.addEventListener('submit', function (event) {
         skill: skill
     };
     //saving the data locally
-    localStorage.setItem(username, JSON.stringify(resumeData));
+    localStorage.setItem(username, JSON.stringify(resumeData)); //string
     //Generate resume content dynamically:
     name_.textContent = name;
     title_.textContent = title;
@@ -52,7 +52,7 @@ form.addEventListener('submit', function (event) {
     obj_.textContent = objective;
     exp_.textContent = experience;
     //Generate a shareable URL with username only
-    var shareableURL = "".concat(window.location.origin, "?username=").concat(encodeURIComponent(username));
+    var shareableURL = "".concat(window.location.origin).concat(location.pathname, "?username=").concat(encodeURIComponent(username));
     //Display shareable link
     link_container.style.display = 'inherit';
     Link.href = shareableURL;
@@ -64,9 +64,9 @@ window.addEventListener('DOMContentLoaded', function () {
     var username = urlParams.get('username');
     if (username) {
         //Autofill form if data is found in localStorage
-        var savedResumeData = localStorage.getItem(username);
+        var savedResumeData = localStorage.getItem(username); //key
         if (savedResumeData) {
-            var resumeData = JSON.parse(savedResumeData);
+            var resumeData = JSON.parse(savedResumeData); //object now
             document.getElementById('Username').value = username;
             document.getElementById('name').value = resumeData.name;
             document.getElementById('email').value = resumeData.email;
@@ -77,7 +77,7 @@ window.addEventListener('DOMContentLoaded', function () {
             document.getElementById('obj').value = resumeData.objective;
             document.getElementById('skills').value = resumeData.skill;
             // Submit the form programmatically
-            form.submit();
+            // form.submit();
         }
     }
 });
